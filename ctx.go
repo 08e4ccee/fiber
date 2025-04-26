@@ -23,11 +23,11 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/gofiber/fiber/v2/internal/schema"
-	"github.com/gofiber/fiber/v2/utils"
-
 	"github.com/valyala/bytebufferpool"
 	"github.com/valyala/fasthttp"
+
+	"github.com/gofiber/fiber/v2/internal/schema"
+	"github.com/gofiber/fiber/v2/utils"
 )
 
 const (
@@ -393,6 +393,70 @@ func (c *Ctx) BodyParser(out interface{}) error {
 	// Parse body accordingly
 	if strings.HasSuffix(ctype, "json") {
 		return c.app.config.JSONDecoder(c.Body(), out)
+	}
+	if strings.HasPrefix(ctype, MIMEApplicationForm) {
+		data := make(map[string][]string)
+		var err error
+
+		c.fasthttp.PostArgs().VisitAll(func(key, val []byte) {
+			if err != nil {
+				return
+			}
+
+			k := c.app.getString(key)
+			v := c.app.getString(val)
+
+			err = formatParserData(out, data, bodyTag, k, v, c.app.config.EnableSplittingOnParsers, true)
+		})
+
+		if err != nil {
+			return err
+		}
+
+		return c.parseToStruct(bodyTag, out, data)
+	}
+	if strings.HasPrefix(ctype, MIMEMultipartForm) {
+		multipartForm, err := c.fasthttp.MultipartForm()
+		if err != nil {
+			return err
+		}
+
+		data := make(map[string][]string)
+		for key, values := range multipartForm.Value {
+			err = formatParserData(out, data, bodyTag, key, values, c.app.config.EnableSplittingOnParsers, true)
+			if err != nil {
+				return err
+			}
+		}
+
+		return c.parseToStruct(bodyTag, out, data)
+	}
+	if strings.HasPrefix(ctype, MIMETextXML) || strings.HasPrefix(ctype, MIMEApplicationXML) {
+		if err := xml.Unmarshal(c.Body(), out); err != nil {
+			return fmt.Errorf("failed to unmarshal: %w", err)
+		}
+		return nil
+	}
+	// No suitable content type found
+	return ErrUnprocessableEntity
+}
+
+func (c *Ctx) BodyParserBYO(out interface{}, byo utils.JSONUnmarshal) error {
+	// Get content-type
+	ctype := utils.ToLower(c.app.getString(c.fasthttp.Request.Header.ContentType()))
+
+	ctype = utils.ParseVendorSpecificContentType(ctype)
+
+	// Only use ctype string up to and excluding byte ';'
+	ctypeEnd := strings.IndexByte(ctype, ';')
+	if ctypeEnd != -1 {
+		ctype = ctype[:ctypeEnd]
+	}
+
+	// Parse body accordingly
+	if strings.HasSuffix(ctype, "json") {
+		return byo(c.Body(), out)
+		// return c.app.config.JSONDecoder(c.Body(), out)
 	}
 	if strings.HasPrefix(ctype, MIMEApplicationForm) {
 		data := make(map[string][]string)
@@ -892,6 +956,21 @@ func (c *Ctx) Is(extension string) bool {
 // The Content-Type header will be set to application/json.
 func (c *Ctx) JSON(data interface{}, ctype ...string) error {
 	raw, err := c.app.config.JSONEncoder(data)
+	if err != nil {
+		return err
+	}
+	c.fasthttp.Response.SetBodyRaw(raw)
+	if len(ctype) > 0 {
+		c.fasthttp.Response.Header.SetContentType(ctype[0])
+	} else {
+		c.fasthttp.Response.Header.SetContentType(MIMEApplicationJSON)
+	}
+	return nil
+}
+
+func (c *Ctx) JSONBYO(data interface{}, byo utils.JSONMarshal, ctype ...string) error {
+	raw, err := byo(data)
+	// raw, err := c.app.config.JSONEncoder(data)
 	if err != nil {
 		return err
 	}
