@@ -6,7 +6,7 @@ import (
 	"reflect"
 	"unsafe"
 
-	ole "github.com/gofiber/fiber/v2/internal/go-ole"
+	ole "github.com/08e4ccee/fiber/v2/internal/go-ole"
 )
 
 type stdDispatch struct {

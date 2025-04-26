@@ -4,7 +4,7 @@ id: recover
 
 # Recover
 
-Recover middleware for [Fiber](https://github.com/gofiber/fiber) that recovers from panics anywhere in the stack chain and handles the control to the centralized [ErrorHandler](https://docs.gofiber.io/guide/error-handling).
+Recover middleware for [Fiber](https://github.com/08e4ccee/fiber) that recovers from panics anywhere in the stack chain and handles the control to the centralized [ErrorHandler](https://docs.gofiber.io/guide/error-handling).
 
 ## Signatures
 
@@ -18,8 +18,8 @@ Import the middleware package that is part of the Fiber web framework
 
 ```go
 import (
-  "github.com/gofiber/fiber/v2"
-  "github.com/gofiber/fiber/v2/middleware/recover"
+  "github.com/08e4ccee/fiber/v2"
+  "github.com/08e4ccee/fiber/v2/middleware/recover"
 )
 ```
 

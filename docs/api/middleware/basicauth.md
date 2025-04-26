@@ -4,7 +4,7 @@ id: basicauth
 
 # BasicAuth
 
-Basic Authentication middleware for [Fiber](https://github.com/gofiber/fiber) that provides an HTTP basic authentication. It calls the next handler for valid credentials and [401 Unauthorized](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401) or a custom response for missing or invalid credentials.
+Basic Authentication middleware for [Fiber](https://github.com/08e4ccee/fiber) that provides an HTTP basic authentication. It calls the next handler for valid credentials and [401 Unauthorized](https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/401) or a custom response for missing or invalid credentials.
 
 ## Signatures
 
@@ -18,8 +18,8 @@ Import the middleware package that is part of the Fiber web framework
 
 ```go
 import (
-  "github.com/gofiber/fiber/v2"
-  "github.com/gofiber/fiber/v2/middleware/basicauth"
+  "github.com/08e4ccee/fiber/v2"
+  "github.com/08e4ccee/fiber/v2/middleware/basicauth"
 )
 ```
 

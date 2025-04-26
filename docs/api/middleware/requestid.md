@@ -4,7 +4,7 @@ id: requestid
 
 # RequestID
 
-RequestID middleware for [Fiber](https://github.com/gofiber/fiber) that adds an identifier to the response.
+RequestID middleware for [Fiber](https://github.com/08e4ccee/fiber) that adds an identifier to the response.
 
 ## Signatures
 
@@ -18,8 +18,8 @@ Import the middleware package that is part of the Fiber web framework
 
 ```go
 import (
-  "github.com/gofiber/fiber/v2"
-  "github.com/gofiber/fiber/v2/middleware/requestid"
+  "github.com/08e4ccee/fiber/v2"
+  "github.com/08e4ccee/fiber/v2/middleware/requestid"
 )
 ```
 

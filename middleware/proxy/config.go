@@ -4,7 +4,7 @@ import (
 	"crypto/tls"
 	"time"
 
-	"github.com/gofiber/fiber/v2"
+	"github.com/08e4ccee/fiber/v2"
 
 	"github.com/valyala/fasthttp"
 )

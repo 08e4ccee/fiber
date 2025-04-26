@@ -1,5 +1,5 @@
 // ⚡️ Fiber is an Express inspired web framework written in Go with ☕️
-// 🤖 Github Repository: https://github.com/gofiber/fiber
+// 🤖 Github Repository: https://github.com/08e4ccee/fiber
 // 📌 API Documentation: https://docs.gofiber.io
 
 package fiber
@@ -13,7 +13,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/gofiber/fiber/v2/utils"
+	"github.com/08e4ccee/fiber/v2/utils"
 
 	"github.com/valyala/fasthttp"
 )

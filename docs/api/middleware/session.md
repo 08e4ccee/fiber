@@ -4,7 +4,7 @@ id: session
 
 # Session
 
-Session middleware for [Fiber](https://github.com/gofiber/fiber).
+Session middleware for [Fiber](https://github.com/08e4ccee/fiber).
 
 :::note
 This middleware uses our [Storage](https://github.com/gofiber/storage) package to support various databases through a single interface. The default configuration for this middleware saves data to memory, see the examples below for other databases.
@@ -39,8 +39,8 @@ Storing `interface{}` values are limited to built-ins Go types.
 Import the middleware package that is part of the Fiber web framework
 ```go
 import (
-  "github.com/gofiber/fiber/v2"
-  "github.com/gofiber/fiber/v2/middleware/session"
+  "github.com/08e4ccee/fiber/v2"
+  "github.com/08e4ccee/fiber/v2/middleware/session"
 )
 ```
 

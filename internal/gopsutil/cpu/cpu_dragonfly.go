@@ -13,7 +13,7 @@ import (
 
 	"golang.org/x/sys/unix"
 
-	"github.com/gofiber/fiber/v2/internal/gopsutil/common"
+	"github.com/08e4ccee/fiber/v2/internal/gopsutil/common"
 )
 
 var (

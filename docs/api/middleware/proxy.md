@@ -4,7 +4,7 @@ id: proxy
 
 # Proxy
 
-Proxy middleware for [Fiber](https://github.com/gofiber/fiber) that allows you to proxy requests to multiple servers.
+Proxy middleware for [Fiber](https://github.com/08e4ccee/fiber) that allows you to proxy requests to multiple servers.
 
 ## Signatures
 
@@ -33,8 +33,8 @@ Import the middleware package that is part of the Fiber web framework
 
 ```go
 import (
-    "github.com/gofiber/fiber/v2"
-    "github.com/gofiber/fiber/v2/middleware/proxy"
+    "github.com/08e4ccee/fiber/v2"
+    "github.com/08e4ccee/fiber/v2/middleware/proxy"
 )
 ```
 

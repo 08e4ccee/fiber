@@ -4,7 +4,7 @@ id: etag
 
 # ETag
 
-ETag middleware for [Fiber](https://github.com/gofiber/fiber) that lets caches be more efficient and save bandwidth, as a web server does not need to resend a full response if the content has not changed.
+ETag middleware for [Fiber](https://github.com/08e4ccee/fiber) that lets caches be more efficient and save bandwidth, as a web server does not need to resend a full response if the content has not changed.
 
 ## Signatures
 
@@ -18,8 +18,8 @@ Import the middleware package that is part of the Fiber web framework
 
 ```go
 import (
-  "github.com/gofiber/fiber/v2"
-  "github.com/gofiber/fiber/v2/middleware/etag"
+  "github.com/08e4ccee/fiber/v2"
+  "github.com/08e4ccee/fiber/v2/middleware/etag"
 )
 ```
 

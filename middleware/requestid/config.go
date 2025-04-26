@@ -1,8 +1,8 @@
 package requestid
 
 import (
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/utils"
+	"github.com/08e4ccee/fiber/v2"
+	"github.com/08e4ccee/fiber/v2/utils"
 )
 
 // Config defines the config for middleware.

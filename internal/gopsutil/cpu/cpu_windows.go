@@ -9,8 +9,8 @@ import (
 
 	"golang.org/x/sys/windows"
 
-	"github.com/gofiber/fiber/v2/internal/gopsutil/common"
-	"github.com/gofiber/fiber/v2/internal/wmi"
+	"github.com/08e4ccee/fiber/v2/internal/gopsutil/common"
+	"github.com/08e4ccee/fiber/v2/internal/wmi"
 )
 
 var (

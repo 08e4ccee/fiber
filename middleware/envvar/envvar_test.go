@@ -9,8 +9,8 @@ import (
 	"os"
 	"testing"
 
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/utils"
+	"github.com/08e4ccee/fiber/v2"
+	"github.com/08e4ccee/fiber/v2/utils"
 )
 
 func TestEnvVarStructWithExportVarsExcludeVars(t *testing.T) {

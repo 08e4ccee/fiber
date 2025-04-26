@@ -6,7 +6,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gofiber/fiber/v2/utils"
+	"github.com/08e4ccee/fiber/v2/utils"
 
 	"github.com/valyala/bytebufferpool"
 )

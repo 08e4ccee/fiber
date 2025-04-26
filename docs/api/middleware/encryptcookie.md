@@ -4,7 +4,7 @@ id: encryptcookie
 
 # Encrypt Cookie
 
-Encrypt Cookie is a middleware for [Fiber](https://github.com/gofiber/fiber) that secures your cookie values through encryption. 
+Encrypt Cookie is a middleware for [Fiber](https://github.com/08e4ccee/fiber) that secures your cookie values through encryption. 
 
 :::note
 This middleware encrypts cookie values and not the cookie names.
@@ -26,8 +26,8 @@ To use the Encrypt Cookie middleware, first, import the middleware package as pa
 
 ```go
 import (
-  "github.com/gofiber/fiber/v2"
-  "github.com/gofiber/fiber/v2/middleware/encryptcookie"
+  "github.com/08e4ccee/fiber/v2"
+  "github.com/08e4ccee/fiber/v2/middleware/encryptcookie"
 )
 ```
 

@@ -7,12 +7,12 @@ import (
 	"sync/atomic"
 	"time"
 
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/internal/gopsutil/cpu"
-	"github.com/gofiber/fiber/v2/internal/gopsutil/load"
-	"github.com/gofiber/fiber/v2/internal/gopsutil/mem"
-	"github.com/gofiber/fiber/v2/internal/gopsutil/net"
-	"github.com/gofiber/fiber/v2/internal/gopsutil/process"
+	"github.com/08e4ccee/fiber/v2"
+	"github.com/08e4ccee/fiber/v2/internal/gopsutil/cpu"
+	"github.com/08e4ccee/fiber/v2/internal/gopsutil/load"
+	"github.com/08e4ccee/fiber/v2/internal/gopsutil/mem"
+	"github.com/08e4ccee/fiber/v2/internal/gopsutil/net"
+	"github.com/08e4ccee/fiber/v2/internal/gopsutil/process"
 )
 
 type stats struct {

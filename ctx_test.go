@@ -1,5 +1,5 @@
 // ⚡️ Fiber is an Express inspired web framework written in Go with ☕️
-// 🤖 Github Repository: https://github.com/gofiber/fiber
+// 🤖 Github Repository: https://github.com/08e4ccee/fiber
 // 📌 API Documentation: https://docs.gofiber.io
 
 //nolint:bodyclose // Much easier to just ignore memory leaks in tests
@@ -29,8 +29,8 @@ import (
 	"text/template"
 	"time"
 
-	"github.com/gofiber/fiber/v2/internal/storage/memory"
-	"github.com/gofiber/fiber/v2/utils"
+	"github.com/08e4ccee/fiber/v2/internal/storage/memory"
+	"github.com/08e4ccee/fiber/v2/utils"
 
 	"github.com/valyala/bytebufferpool"
 	"github.com/valyala/fasthttp"

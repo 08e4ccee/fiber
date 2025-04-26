@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/middleware/session"
-	"github.com/gofiber/fiber/v2/utils"
+	"github.com/08e4ccee/fiber/v2"
+	"github.com/08e4ccee/fiber/v2/middleware/session"
+	"github.com/08e4ccee/fiber/v2/utils"
 
 	"github.com/valyala/fasthttp"
 )
@@ -937,7 +937,7 @@ func Test_CSRF_Cookie_Injection_Exploit(t *testing.T) {
 	utils.AssertEqual(t, 403, ctx.Response.StatusCode(), "CSRF exploit successful")
 }
 
-// TODO: use this test case and make the unsafe header value bug from https://github.com/gofiber/fiber/issues/2045 reproducible and permanently fixed/tested by this testcase
+// TODO: use this test case and make the unsafe header value bug from https://github.com/08e4ccee/fiber/issues/2045 reproducible and permanently fixed/tested by this testcase
 // func Test_CSRF_UnsafeHeaderValue(t *testing.T) {
 //  t.Parallel()
 // 	app := fiber.New()

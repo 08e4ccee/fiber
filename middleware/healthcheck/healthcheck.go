@@ -1,8 +1,8 @@
 package healthcheck
 
 import (
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/utils"
+	"github.com/08e4ccee/fiber/v2"
+	"github.com/08e4ccee/fiber/v2/utils"
 )
 
 // HealthChecker defines a function to check liveness or readiness of the application

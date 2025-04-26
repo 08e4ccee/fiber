@@ -6,9 +6,9 @@ import (
 	"context"
 	"syscall"
 
-	"github.com/gofiber/fiber/v2/internal/gopsutil/common"
-	"github.com/gofiber/fiber/v2/internal/gopsutil/cpu"
-	"github.com/gofiber/fiber/v2/internal/gopsutil/net"
+	"github.com/08e4ccee/fiber/v2/internal/gopsutil/common"
+	"github.com/08e4ccee/fiber/v2/internal/gopsutil/cpu"
+	"github.com/08e4ccee/fiber/v2/internal/gopsutil/net"
 )
 
 type MemoryMapsStat struct {

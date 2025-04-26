@@ -3,8 +3,8 @@ package limiter
 import (
 	"time"
 
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/log"
+	"github.com/08e4ccee/fiber/v2"
+	"github.com/08e4ccee/fiber/v2/log"
 )
 
 // Config defines the config for middleware.

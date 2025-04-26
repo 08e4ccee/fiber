@@ -15,10 +15,10 @@ import (
 
 	"golang.org/x/sys/unix"
 
-	"github.com/gofiber/fiber/v2/internal/gopsutil/common"
-	cpu "github.com/gofiber/fiber/v2/internal/gopsutil/cpu"
-	mem "github.com/gofiber/fiber/v2/internal/gopsutil/mem"
-	net "github.com/gofiber/fiber/v2/internal/gopsutil/net"
+	"github.com/08e4ccee/fiber/v2/internal/gopsutil/common"
+	cpu "github.com/08e4ccee/fiber/v2/internal/gopsutil/cpu"
+	mem "github.com/08e4ccee/fiber/v2/internal/gopsutil/mem"
+	net "github.com/08e4ccee/fiber/v2/internal/gopsutil/net"
 )
 
 // MemoryInfoExStat is different between OSes

@@ -8,7 +8,7 @@ AUTHOR_EMAIL="github-actions[bot]@users.noreply.github.com"
 AUTHOR_USERNAME="github-actions[bot]"
 VERSION_FILE="versions.json"
 REPO_DIR="core"
-COMMIT_URL="https://github.com/gofiber/fiber"
+COMMIT_URL="https://github.com/08e4ccee/fiber"
 DOCUSAURUS_COMMAND="npm run docusaurus -- docs:version"
 
 # Set commit author

@@ -5,9 +5,9 @@ import (
 	"errors"
 	"fmt"
 
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/internal/storage/memory"
-	"github.com/gofiber/fiber/v2/utils"
+	"github.com/08e4ccee/fiber/v2"
+	"github.com/08e4ccee/fiber/v2/internal/storage/memory"
+	"github.com/08e4ccee/fiber/v2/utils"
 )
 
 // ErrEmptySessionID is an error that occurs when the session ID is empty.

@@ -4,8 +4,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gofiber/fiber/v2/middleware/idempotency"
-	"github.com/gofiber/fiber/v2/utils"
+	"github.com/08e4ccee/fiber/v2/middleware/idempotency"
+	"github.com/08e4ccee/fiber/v2/utils"
 )
 
 // go test -run Test_MemoryLock

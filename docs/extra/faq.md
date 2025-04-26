@@ -107,8 +107,8 @@ package main
 import (
 	"log"
 
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/middleware/logger"
+	"github.com/08e4ccee/fiber/v2"
+	"github.com/08e4ccee/fiber/v2/middleware/logger"
 )
 
 type Host struct {
@@ -166,4 +166,4 @@ func main() {
 	log.Fatal(app.Listen(":3000"))
 }
 ```
-If more information is needed, please refer to this issue [#750](https://github.com/gofiber/fiber/issues/750)
+If more information is needed, please refer to this issue [#750](https://github.com/08e4ccee/fiber/issues/750)

@@ -4,7 +4,7 @@ id: idempotency
 
 # Idempotency
 
-Idempotency middleware for [Fiber](https://github.com/gofiber/fiber) allows for fault-tolerant APIs where duplicate requests — for example due to networking issues on the client-side — do not erroneously cause the same action performed multiple times on the server-side.
+Idempotency middleware for [Fiber](https://github.com/08e4ccee/fiber) allows for fault-tolerant APIs where duplicate requests — for example due to networking issues on the client-side — do not erroneously cause the same action performed multiple times on the server-side.
 
 Refer to https://datatracker.ietf.org/doc/html/draft-ietf-httpapi-idempotency-key-header-02 for a better understanding.
 
@@ -20,8 +20,8 @@ Import the middleware package that is part of the Fiber web framework
 
 ```go
 import (
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/middleware/idempotency"
+	"github.com/08e4ccee/fiber/v2"
+	"github.com/08e4ccee/fiber/v2/middleware/idempotency"
 )
 ```
 

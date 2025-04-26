@@ -1,7 +1,7 @@
 package encryptcookie
 
 import (
-	"github.com/gofiber/fiber/v2"
+	"github.com/08e4ccee/fiber/v2"
 )
 
 // Config defines the config for middleware.

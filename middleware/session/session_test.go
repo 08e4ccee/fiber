@@ -6,9 +6,9 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gofiber/fiber/v2"
-	"github.com/gofiber/fiber/v2/internal/storage/memory"
-	"github.com/gofiber/fiber/v2/utils"
+	"github.com/08e4ccee/fiber/v2"
+	"github.com/08e4ccee/fiber/v2/internal/storage/memory"
+	"github.com/08e4ccee/fiber/v2/utils"
 
 	"github.com/valyala/fasthttp"
 )
@@ -452,7 +452,7 @@ func Test_Session_Cookie(t *testing.T) {
 }
 
 // go test -run Test_Session_Cookie_In_Response
-// Regression: https://github.com/gofiber/fiber/pull/1191
+// Regression: https://github.com/08e4ccee/fiber/pull/1191
 func Test_Session_Cookie_In_Middleware_Chain(t *testing.T) {
 	t.Parallel()
 	store := New()
@@ -481,7 +481,7 @@ func Test_Session_Cookie_In_Middleware_Chain(t *testing.T) {
 }
 
 // go test -run Test_Session_Deletes_Single_Key
-// Regression: https://github.com/gofiber/fiber/issues/1365
+// Regression: https://github.com/08e4ccee/fiber/issues/1365
 func Test_Session_Deletes_Single_Key(t *testing.T) {
 	t.Parallel()
 	store := New()
@@ -590,7 +590,7 @@ func Test_Session_Reset(t *testing.T) {
 }
 
 // go test -run Test_Session_Regenerate
-// Regression: https://github.com/gofiber/fiber/issues/1395
+// Regression: https://github.com/08e4ccee/fiber/issues/1395
 func Test_Session_Regenerate(t *testing.T) {
 	t.Parallel()
 	// fiber instance

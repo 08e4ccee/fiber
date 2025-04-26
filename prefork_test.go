@@ -1,5 +1,5 @@
 // ⚡️ Fiber is an Express inspired web framework written in Go with ☕️
-// 📄 Github Repository: https://github.com/gofiber/fiber
+// 📄 Github Repository: https://github.com/08e4ccee/fiber
 // 📌 API Documentation: https://docs.gofiber.io
 // 💖 Maintained and modified for Fiber by @renewerner87
 package fiber
@@ -11,7 +11,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/gofiber/fiber/v2/utils"
+	"github.com/08e4ccee/fiber/v2/utils"
 )
 
 func Test_App_Prefork_Child_Process(t *testing.T) {
